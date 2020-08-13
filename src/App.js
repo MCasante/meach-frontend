@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.css';
 import Header from './components/layouts/Header';
+import Main from './components/layouts/Main';
 import Footer from './components/layouts/Footer';
 
 function App() {
   return (
     <div className="app_holder">
       <Header />
-      <main></main>
+      <Main />
       <Footer />
     </div>
   );
