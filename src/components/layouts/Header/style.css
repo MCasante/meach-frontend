@@ -1,0 +1,8 @@
+.app_header {
+  padding: 2.5rem 0;
+}
+
+.app_header .container {
+  display: flex;
+  justify-content: space-between;
+}

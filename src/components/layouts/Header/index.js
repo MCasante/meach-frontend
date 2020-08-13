@@ -1,15 +1,17 @@
 import React from 'react';
 import './style.css';
 
-const Header = (props) => {
-  const { logo, children } = props;
+import logo from './../../../assets/images/meach-logo.svg';
 
+const Header = (props) => {
   return (
-    <header>
-      <div className="logo">
-        <img src={logo} alt="" />
+    <header className="app_header">
+      <div className="container">
+        <div className="logo">
+          <img src={logo} width="300" height="140" alt="Meach Logo" />
+        </div>
+        <div className="menu">{props.children}</div>
       </div>
-      <div className="menu">{children}</div>
     </header>
   );
 };
