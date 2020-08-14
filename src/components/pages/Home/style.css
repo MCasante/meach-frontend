@@ -1,39 +1,52 @@
 .text_intro h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
 }
 
 .text_intro p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
 .featured_publishers {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 2.5rem;
-  padding: 2.5rem 0;
+  grid-gap: 0.2rem;
+  border-radius: 10px;
+  margin: 2.5rem 0;
+  overflow: hidden;
 }
 
 .featured_publishers .publisher {
-  background-image: url('../../../assets/images/each-campus-image-processed.jpg');
+  background-image: url('../../../assets/images/each-campus-image.jpg');
   background-position: center top;
   background-origin: content-box;
   background-size: cover;
   background-attachment: fixed;
-  border-radius: 10px;
   position: relative;
   overflow: hidden;
-  box-shadow: inset 0 0 1rem rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
 }
 
 .featured_publishers .publisher:before {
   content: '';
-  top: 0;
+  top: 50%;
   left: 0;
   width: 100%;
   height: 100%;
   position: absolute;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.4);
+  background: hsla(190, 91%, 15%, 0.2);
+  transform: translateY(-50%);
+  backdrop-filter: blur(0.5rem);
+  transition: 0.3s;
+}
+
+.featured_publishers .publisher:hover:before {
+  transform: translateY(-50%);
+
+  height: 100%;
+  width: 100%;
+  filter: blur(0);
+  background: hsla(190, 99%, 25%, 0.7);
 }
 
 .featured_publishers .publisher a {
@@ -46,7 +59,8 @@
   position: relative;
   z-index: 2;
 
-  color: #fff;
+  color: var(--white);
+  text-shadow: 0 0 0.4rem rgba(0, 0, 0, 0.3);
   text-decoration: none;
   font-weight: 500;
   font-size: 3rem;
@@ -55,6 +69,6 @@
 
 @media screen and (min-width: 768px) {
   .featured_publishers {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }

@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap');
 
+:root {
+  --orange: #fb9e0d;
+  --blue: #0199b9;
+  --black: #333;
+  --white: #fff;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -14,7 +21,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
 
-  color: #333;
+  color: var(--black);
 }
 
 p {

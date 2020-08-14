@@ -12,7 +12,7 @@ const Home = () => {
   }
 
   useEffect(() => {
-    const arr = Array.from({ length: 6 })
+    const arr = Array.from({ length: 12 })
       .fill()
       .map((_) => fakeApiCall());
 
@@ -29,13 +29,13 @@ const Home = () => {
           sempre publicando as vagas mais relevantes para cada curso!
           <br />
           <br />
-          Selecione a entidade que te representa:
+          Selecione o diretório do seu curso:
         </p>
       </div>
       {publisherList.length > 0 && (
         <section className="featured_publishers">
           {publisherList.map((publisher, i) => (
-            <div className="publisher">
+            <div className="publisher" key={i}>
               <a href={publisher.link}>{publisher.name}</a>
             </div>
           ))}

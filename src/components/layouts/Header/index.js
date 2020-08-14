@@ -8,7 +8,7 @@ const Header = (props) => {
     <header className="app_header">
       <div className="container">
         <div className="logo">
-          <img src={logo} width="300" height="140" alt="Meach Logo" />
+          <img src={logo} width="250" height="115" alt="Meach Logo" />
         </div>
         <div className="menu">{props.children}</div>
       </div>
